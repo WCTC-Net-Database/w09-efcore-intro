@@ -25,7 +25,27 @@ If you've fallen behind or your code has issues:
 
 ## Overview
 
-This week introduces **Entity Framework Core** - Microsoft's modern object-relational mapper (ORM) for .NET. You'll transition from file-based storage (CSV/JSON) to a real SQL Server database. This is a significant milestone: your `IFileHandler` pattern from Week 4 prepared you for exactly this kind of swap!
+This week introduces **Entity Framework Core** - Microsoft's modern object-relational mapper (ORM) for .NET. You'll transition from file-based storage (CSV/JSON) to a real SQL Server database.
+
+### Remember Weeks 4 and 7? This is the Payoff!
+
+You've been building toward this moment:
+
+```
+Week 4:  IFileHandler                 Week 7:  IContext                  Week 9:  DbContext
+├── ReadAll()                         ├── Players (List)                 ├── Players (DbSet)
+├── WriteAll()                        ├── Monsters (List)                ├── Monsters (DbSet)
+├── Find methods              →       ├── Read()                  →      ├── LINQ queries
+└── CsvFileHandler                    ├── Write(entity)                  ├── Add(entity)
+    JsonFileHandler                   └── SaveChanges()                  └── SaveChanges()
+```
+
+**The pattern is the same:**
+- Week 4: You swapped CSV for JSON without changing business logic
+- Week 7: `IContext` added `SaveChanges()` - just like DbContext!
+- Week 9: `DbContext` is the real deal - same pattern, real database
+
+Your business logic doesn't care where data comes from. Whether it's CSV files, JSON files, or SQL Server - the pattern remains: **depend on abstractions, swap implementations.**
 
 ## Learning Objectives
 
