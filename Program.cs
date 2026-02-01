@@ -1,7 +1,7 @@
-﻿using W9_assignment_template.Data;
-using W9_assignment_template.Services;
+﻿using W09.Data;
+using W09.Services;
 
-namespace W9_assignment_template;
+namespace W09;
 
 class Program
 {

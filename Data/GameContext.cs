@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using W9_assignment_template.Models;
+using W09.Models;
 
-namespace W9_assignment_template.Data;
+namespace W09.Data;
 
 public class GameContext : DbContext
 {

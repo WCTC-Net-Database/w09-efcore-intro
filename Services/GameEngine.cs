@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using W9_assignment_template.Data;
-using W9_assignment_template.Models;
+using W09.Data;
+using W09.Models;
 
-namespace W9_assignment_template.Services;
+namespace W09.Services;
 
 public class GameEngine
 {
